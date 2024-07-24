@@ -6,7 +6,7 @@ function Home(){
     const [items, setItems] = useState(null) //Importar API
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products') //traer la información de la API
+        fetch('https://api.escuelajs.co/api/v1/products') //traer la información de la API
         .then(response => response.json()) //mostrar información que trae
         .then(data => setItems(data))
     }, [])
