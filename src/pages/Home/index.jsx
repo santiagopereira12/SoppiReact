@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react" //Importante a la Hora de consumir API
 import Layout from "../../components/layout"
 import Card from "../../components/card"
+import ProductDetail from '../../components/productDetail'
 
 function Home(){
     const [items, setItems] = useState(null) //Importar API
@@ -21,6 +22,7 @@ function Home(){
                 ))
             }
             </div>
+            <ProductDetail />
         </Layout>
     )
 }
