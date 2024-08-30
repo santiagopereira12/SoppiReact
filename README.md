@@ -41,7 +41,7 @@ Sigue los siguientes pasos para instalar y ejecutar SoppiReact en tu máquina lo
 3. **Inicia la aplicación**
     ```bash
    npm run dev ```
-La aplicación debe estar corriendo en **http://localhost:3000**
+La aplicación debe estar corriendo en **http://localhost:5173**
 
 ### Uso
 Una vez que la aplicación esté en ejecución, puedes:
