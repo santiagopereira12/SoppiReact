@@ -32,7 +32,6 @@ export const ShoppingCartProvider = ({children}) => {
 
     //Get Products By Category
     const [searchByCategory, setSearchByCategory] = useState(null)
-    console.log('searchByCategory: ', searchByCategory)
 
     useEffect(() => {
         fetch('https://api.escuelajs.co/api/v1/products') //traer la información de la API
@@ -45,7 +44,6 @@ export const ShoppingCartProvider = ({children}) => {
     }
 
     const filteredItemsByCategory = (items, searchByCategory) =>{
-        console.log('Items: ', items)
         return items?.filter(item => item.category.name.toLowerCase().includes(searchByCategory.toLowerCase()))
     }
 
@@ -67,8 +65,6 @@ export const ShoppingCartProvider = ({children}) => {
         if(!searchByTitle && searchByCategory) setFilteredItems(filterBy('BY_CATEGORY', items, searchByTitle, searchByCategory))
         if(!searchByTitle && !searchByCategory) setFilteredItems(filterBy(null, items, searchByTitle, searchByCategory))
     }, [items, searchByTitle, searchByCategory])
-
-    console.log('filteredItems: ', filteredItems)
 
     return (
         <ShoppingCartContext.Provider value={{
